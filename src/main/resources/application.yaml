@@ -1,16 +1,18 @@
-datasource:
-  url: jdbc:mysql://localhost:3306/loginapi?serverTimezone=Asia/Seoul
-  username: root
-  password: 1234
-  driver-class-name: com.mysql.cj.jdbc.Driver
-jpa:
-  database-platform: org.hibernate.dialect.MySQL8Dialect
-  hibernate:
-    ddl-auto: create
-  properties:
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/loginapi?serverTimezone=Asia/Seoul
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
-      show_sql: true
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
 
 jwt:
   secret:
-    key:
+    key: anVzdC1hLXNlY3JldC1rZXktaS1oYXRlLW1vbmRheS1hbmQtaS13YW5uYS1iZS1iYWNrcC1lbmQtZGV2ZWxvcGVyLXdoby1oYXMtZ29vZC10ZWNoCg==
